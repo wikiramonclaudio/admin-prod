@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 //DB conection
-mongoose.connection.openUri(MONGODB_ADDON_URI, { useNewUrlParser: true }, (error, res)=>{
+mongoose.connection.openUri('mongodb://uzuc3x2gpkvqdqol5x07:8VKRjDWdtGWdQfXLaxy0@bgas5dkc1tw3gdi-mongodb.services.clever-cloud.com:27017/bgas5dkc1tw3gdi', { useNewUrlParser: true }, (error, res)=>{
     if(error)
         console.log(error);
         console.log('conectado a la DB hospitalDB en mongoDB');
