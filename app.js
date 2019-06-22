@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 
 var fileUpload = require('express-fileupload');
 
+
 //import routes
 var app_routes = require('./routes/app');
 var user_routes = require('./routes/user');
@@ -51,7 +52,7 @@ app.use('/search', search_routes);
 app.use('/upload',fileUpload(), upload_routes);
 app.use('/', app_routes);
 
-
+console.log(app._router.stack);
 
 //escuchar peticiones
 app.listen(8080, ()=>{
