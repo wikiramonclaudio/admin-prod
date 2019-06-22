@@ -42,9 +42,7 @@ api.get('/', [md_auth.ensureAuth], (req, res)=>{
 //  Añadir usuarios
 // ========================
 api.post('/', (req, res)=>{
-    var url = req.protocol + '://' + req.get('host') + req.originalUrl;
-    console.log('URL DEL BACKENDDDDD!!!!');
-    console.log(url);
+    var url = req.protocol + '://' + req.get('host') + req.originalUrl; 
     var body = req.body;    
     var user = new User({
         name: body.name,
