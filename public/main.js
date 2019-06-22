@@ -450,7 +450,7 @@ var UploadWindowComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URL_SERVICES", function() { return URL_SERVICES; });
-var URL_SERVICES = 'http://localhost:8080';
+var URL_SERVICES = 'http://troyackson.cleverapps.io';
 
 
 /***/ }),
