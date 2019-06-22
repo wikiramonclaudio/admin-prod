@@ -25,6 +25,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 //DB conection
 mongoose.connection.openUri('mongodb://localhost:27017/hospitalDB', { useNewUrlParser: true }, (error, res)=>{
     if(error)
