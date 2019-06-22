@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 //DB conection
-mongoose.connection.openUri('mongodb://localhost:27017/hospitalDB', { useNewUrlParser: true }, (error, res)=>{
+mongoose.connection.openUri('mongodb://uzuc3x2gpkvqdqol5x07:8VKRjDWdtGWdQfXLaxy0@bgas5dkc1tw3gdi-mongodb.services.clever-cloud.com:27017/bgas5dkc1tw3gdi', { useNewUrlParser: true }, (error, res)=>{
     if(error)
         console.log(error);
         console.log('conectado a la DB hospitalDB en mongoDB');
@@ -54,6 +54,6 @@ app.use('/', app_routes);
 
 
 //escuchar peticiones
-app.listen(3000, ()=>{
-    console.log('Servidor Node/Express corriendo en puerto 3000: \x1b[36m%s\x1b[0m', 'online');
+app.listen(8080, ()=>{
+    console.log('Servidor Node/Express corriendo en puerto 8080: \x1b[36m%s\x1b[0m', 'online');
 });
