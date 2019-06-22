@@ -12,8 +12,7 @@ var md_auth = require('../middlewares/jwt');
 //  Obtener usuarios
 // ========================
 api.get('/', [md_auth.ensureAuth], (req, res)=>{
-
-    console.log(req.user);
+    
     var from = req.query.from || 0;
     from = Number(from);
     var resulsPerPage = 5;
@@ -43,6 +42,9 @@ api.get('/', [md_auth.ensureAuth], (req, res)=>{
 //  Añadir usuarios
 // ========================
 api.post('/', (req, res)=>{
+    var url = req.protocol + '://' + req.get('host') + req.originalUrl;
+    console.log('URL DEL BACKENDDDDD!!!!');
+    console.log(url);
     var body = req.body;    
     var user = new User({
         name: body.name,
